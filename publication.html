@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="zh-tw">
+    <title>Yi-Cheng Chan</title>
+
+    <!--CSS Format-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <style type="text/css">
+        body {
+            font-family: Century, 'Times New Roman', serif;
+        }
+
+        .tableBackground {
+            background-color: white;
+            border: 0.5rem ridge #C0C0C0;
+
+        }
+    </style>
+</head>
+
+
+<body background="./images/Cloth-3.jpg">
+
+    <div id="" style="padding: 1rem;" align="center">
+        <table class="tableBackground" border="0" cellpadding="0" cellspacing="0" width="845" bgcolor="#FFFFFF">
+            <tbody>
+                <tr id="linkBadge">
+                    <td height="61" colspan="2">
+                        <p aligh="center">
+                            <span style="background-color: #FFFFFF">
+                                &nbsp&nbsp
+                                <a v-bind:href="homeLink">
+                                    <img border="0" v-bind:src="homeSrc" width="84" height="30"></a>&nbsp;
+                                <a v-bind:href="profileLink">
+                                    <img border="0" v-bind:src="profileSrc" width="110" height="30"></a>&nbsp;
+                                <a v-bind:href="publicationLink">
+                                    <img border="0" v-bind:src="publicationSrc" width="165" height="30"></a>&nbsp;
+                                <a v-bind:href="teachingLink">
+                                    <img border="0" v-bind:src="teachingSrc" width="130" height="30"></a>&nbsp;
+                                <a v-bind:href="projectLink">
+                                    <img border="0" v-bind:src="projectSrc" width="118" height="30"></a>&nbsp;
+                                <a v-bind:href="advisingLink">
+                                    <img border="0" v-bind:src="advisingSrc" width="131" height="30"></a>
+                            </span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">
+                        <span><b>[Journal Paper]</b></span>
+                        <ol id="journal">
+                            <li>{{ journal_1 }}</li>
+                            <li>{{ journal_2 }}</li>
+                            <li>{{ journal_3 }}</li>
+                            <li>{{ journal_4 }}</li>
+                            <li>{{ journal_5 }}</li>
+                            <li>{{ journal_6 }}</li>
+                            <li>{{ journal_7 }}</li>
+                            <li>{{ journal_8 }}</li>
+                            <li>{{ journal_9 }}</li>
+                            <li>{{ journal_10 }}</li>
+                            <li>{{ journal_11 }}</li>
+                            <li>{{ journal_12 }}</li>
+                            <li>{{ journal_13 }}</li>
+                            <li>{{ journal_14 }}</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">
+                        <span><b>[Conference Paper](International)</b></span>
+                        <ol id="international">
+                            <li>{{ inter_1 }}</li>
+                            <li>{{ inter_2 }}</li>
+                            <li>{{ inter_3 }}</li>
+                            <li>{{ inter_4 }}</li>
+                            <li>{{ inter_5 }}</li>
+                            <li>{{ inter_6 }}</li>
+                            <li>{{ inter_7 }}</li>
+                            <li>{{ inter_8 }}</li>
+                            <li>{{ inter_9 }}</li>
+                            <li>{{ inter_10 }}</li>
+                            <li>{{ inter_11 }}</li>
+                            <li>{{ inter_12 }}</li>
+                            <li>{{ inter_13 }}</li>
+                            <li>{{ inter_14 }}</li>
+                            <li>{{ inter_15 }}</li>
+                            <li>{{ inter_16 }}</li>
+                            <li>{{ inter_17 }}</li>
+                            <li>{{ inter_18 }}</li>
+                            <li>{{ inter_19 }}</li>
+                            <li>{{ inter_20 }}</li>
+                            <li>{{ inter_21 }}</li>
+                            <li>{{ inter_22 }}</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">
+                        <span><b>[Conference Paper](Domestic)</b></span>
+                        <ol id="domestic">
+                            <li>{{ domestic_1 }}</li>
+                            <li>{{ domestic_2 }}</li>
+                            <li>{{ domestic_3 }}</li>
+                            <li>{{ domestic_4 }}</li>
+                            <li>{{ domestic_5 }}</li>
+                            <li>{{ domestic_6 }}</li>
+                            <li>{{ domestic_7 }}</li>
+                            <li>{{ domestic_8 }}</li>
+                            <li>{{ domestic_9 }}</li>
+                            <li>{{ domestic_10 }}</li>
+                            <li>{{ domestic_11 }}</li>
+                            <li>{{ domestic_12 }}</li>
+                            <li>{{ domestic_13 }}</li>
+                            <li>{{ domestic_14 }}</li>
+
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">
+                        <span><b>[Thesis]</b></span>
+                        <ol id="thesis">
+                            <li>{{ thesis_1 }}</li>
+                            <li>{{ thesis_2 }}</li>
+                        </ol>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+    <!-- Area
+        
+        Using Templates
+            1.Vue.js 3.0
+            2.bootstrap 4.6    
+    -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script src="./publication.js"></script>
+</body>
+
+</html>

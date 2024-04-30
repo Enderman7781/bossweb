@@ -1,0 +1,18 @@
+﻿Project,Funding Source,Position,Duration,Amount
+資料中心網路中易部屬且高效利用頻寬之延遲式TCP,Ministry of Science and Technology (MOST 111-2813-C-018-018-E),Advisor,2022/7/1/~2023/2/28,58000
+資料中心中以最小瓶頸為基礎之軟體定義網路路由,Ministry of Science and Technology (MOST 107-2813-C-018-036-E),Advisor,2018/7/1~2019/2/28,48000
+A study of TCP transmission in data center networks: TCP incast and outcast (資料中心網路中之TCP傳輸問題研究：TCP Incast and Outcast),Ministry of Science and Technology (MOST 104-2221-E-018 -005),Principal Investigator,2015/8/1~2016/7/31,587000
+"On applying statistical process control to hybrid TCP(統計過程控制應用於混合式TCP之研究)",Ministry of Science and Technology (MOST 103-2221-E-018 -027),Principal Investigator,2014/8/1~2015/7/31,543000
+Improving TCP performance over packet reordering networks(封包失序網路環境中的TCP效能改進研究),National Science Council (NSC 101-2221-E-018-020),Principal Investigator,2012/8/1~2013/7/31,566000
+"On Applying Network Coding to Transmission Control Protocol(網路編碼應用於傳輸控制協定之研究)",National Science Council (NSC 100-2221-E-018-028),Principal Investigator,2011/8/1~2012/7/31,531000
+"Studies of resource allocation in WiMAX networks: Downlink burst mapping and path selection(WiMAX網路資源配置之研究：下鏈資料叢映射以及路徑選擇)",National Science Council (NSC 99-2221-E-018-016),Principal Investigator,2010/8/1~2011/7/31,531000
+適用於衛星網路之TCP設計與實作,National Science Council (NSC 99-2815-C-018-017-E),Advisor,2010/7/1~2011/2/28,47000
+高頻寬網路之混合式TCP設計與實作,National Science Council (NSC 99-2815-C-018-016-E),Advisor,2010/7/1~2011/2/28,47000
+"Congestion-Aware Downlink Scheduling and Load-Aware Path Selection for IEEE 802.16j Multi-Hop Relay Networks(適用於IEEE 802.16j多躍中繼網路之壅塞感知下鍊排程與負載感知選徑機制)",National Science Council (NSC 98-2221-E-018-007),Principal Investigator,2009/8/1~2010/7/31,577000 + 429368
+"A Study on Maximal Parallelisation of Parallel TCP: Analysis٬Improvement٬and Mechanisms(平行化TCP之最大平行度研究：分析、改善、與機制)",National Science Council (NSC 97-2221-E-018-016),Principal Investigator,2008/8/1~2009/7/31,590000
+異質性網路管理系統之設計與實作,National Science Council (NSC 97-2815-C-018-013-E),Advisor,2008/7/1~2009/2/28,47000
+"A Congestion Control Mechanism for IEEE 802.16j Multi-hop Relay Networks(適用於IEEE 802.16j多躍式轉送網路之壅塞控制機制)",National Changhua University of Education (彰師大研處字第960011120號),Principal Investigator,2008/1/1~2008/12/31,115000
+"Performance Enhancement and Analysis of Delay-Based Congestion Control in Heterogeneous Environments(延遲式壅塞控制在異質環境中之效能改進與分析)",National Science Council (NSC 96-2221-E-018-008),Principal Investigator,20078/1~2008/7/31,534000
+通訊科技人才培育先導型計畫特定課程補助 — 無線區域網路,"Ministry of Education(教育部台顧字第950130909號)",Instructor,2006/8/1~2007/1/31,159000
+"Study and Design of Congestion Control Techniques for High Bandwidth-Delay Product Networks(高頻寬延遲乘積網路之壅塞控制技術研究)",National Science Council (NSC 94-2213-E-018-021),Principal Investigator,2005/8/1~2006/7/31,422000
+"Study and Design of TCP Vegas-based Congestion Control Techniques(以TCP Vegas為基礎之網路壅塞控制技術之研究與設計)",National Science Council (NSC 93-2218-E-018-005),Principal Investigator,2004/12/1~2005/7/31,246400
