@@ -10,9 +10,11 @@
     <!--CSS Format-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <style type="text/css">
         body {
             font-family: Century, 'Times New Roman', serif;
+            text-align: center;
         }
 
         .tableBackground {
@@ -20,7 +22,72 @@
             border: 0.5rem ridge #C0C0C0;
 
         }
+
+        .filters {
+            margin: 20px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            background: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        .timeline {
+            position: relative;
+            width: 80%;
+            margin: 30px auto;
+            border-left: 4px solid #333;
+            padding-left: 20px;
+        }
+
+        .event {
+            margin: 20px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            width: fit-content;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .event.hidden {
+            opacity: 0.2;
+            transform: scale(0.8);
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            transform: scale(1.2);
+        }
+
+        #courseDropdown {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
     </style>
+
 </head>
 
 
@@ -35,39 +102,41 @@
                         <p aligh="center">
                             <span style="background-color: #FFFFFF">
                                 &nbsp&nbsp
-                                <a v-bind:href="homeLink">
-                                    <img border="0" v-bind:src="homeSrc" width="84" height="30"></a>&nbsp;
-                                <a v-bind:href="profileLink">
-                                    <img border="0" v-bind:src="profileSrc" width="110" height="30"></a>&nbsp;
-                                <a v-bind:href="publicationLink">
-                                    <img border="0" v-bind:src="publicationSrc" width="165" height="30"></a>&nbsp;
-                                <a v-bind:href="teachingLink">
-                                    <img border="0" v-bind:src="teachingSrc" width="130" height="30"></a>&nbsp;
-                                <a v-bind:href="projectLink">
-                                    <img border="0" v-bind:src="projectSrc" width="118" height="30"></a>&nbsp;
-                                <a v-bind:href="advisingLink">
-                                    <img border="0" v-bind:src="advisingSrc" width="131" height="30"></a>
+                                <a href="./index.html">
+                                    <img border="0" src="./images/icon-home-gray.gif" width="84" height="30"></a>&nbsp;
+                                <a href="./profile.html">
+                                    <img border="0" src="./images/icon-profile-gray.gif" width="110"
+                                        height="30"></a>&nbsp;
+                                <a href="./publication.html">
+                                    <img border="0" src="./images/icon-publication-gray.gif" width="165"
+                                        height="30"></a>&nbsp;
+                                <a href="./teaching.html">
+                                    <img border="0" src="./images/icon-teaching-orange.gif" width="130"
+                                        height="30"></a>&nbsp;
+                                <a href="./project.html">
+                                    <img border="0" src="./images/icon-project-gray.gif" width="118"
+                                        height="30"></a>&nbsp;
+                                <a href="./advising.html">
+                                    <img border="0" src="./images/icon-advising-gray.gif" width="131" height="30"></a>
                             </span>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="padding: 10px;">
-                        <b>Teaching:</b>
-                        <table class="table table-bordered" id="belowTable">
-                            <thead>
-                            </thead>
-                            <tbody id="graduate">
-                                <tr>
-                                    <td colspan="2" id="graduateTitle"><b>(Graduate Level)</b></td>
-                                </tr>
-                            </tbody>
-                            <tbody id="undergraduate">
-                                <tr>
-                                    <td colspan="2" ud="undergraduateTitle"><b>(Undergraduate Level)</b></td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                        <div style="text-align: center;"> <span for="CourseDropdown"><strong>Select
+                                    Course:</strong></span>
+                            <select id="CourseDropdown" onchange="highlightCourse(this.value)">
+                            </select>
+                        </div>                       
+                        <div id="filters" class="filters">
+
+                        </div>
+
+                        <div id="timeline" class="timeline">
+
+                        </div>
                     </td>
                 </tr>
 
@@ -76,10 +145,6 @@
     </div>
 
     <div id="personalInfo"></div>
-
-
-
-
 
     <!-- Area
         
@@ -97,7 +162,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
+    <script>
+        function filterEvents(course) {
+            const events = document.querySelectorAll('.event');
 
+            events.forEach(event => {
+                if (course === 'all') {
+                    event.classList.remove('hidden', 'highlight');
+                } else if (event.classList.contains(course)) {
+                    event.classList.remove('hidden');
+                    event.classList.add('highlight');
+                } else {
+                    event.classList.add('hidden');
+                    event.classList.remove('highlight');
+                }
+            });
+        }
+    </script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/bootstrap.js"></script>
     <script src="./teaching.js"></script>
 </body>
 
